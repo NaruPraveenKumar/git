@@ -5,6 +5,7 @@ node{
     }
     
    stage('maven buid')
+    {
    sh 'mvn clean package'
    }
 }
