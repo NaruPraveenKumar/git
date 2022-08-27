@@ -4,7 +4,7 @@ node{
      git 'https://github.com/javahometech/my-app.git'
     }
     
-   stage{
+   stage('maven buid')
    sh 'mvn clean package'
    }
 }
