@@ -32,4 +32,11 @@ stage("Quality Gate"){
         }
 
     }
+    stage("deploy war to tomcat")
+    {
+    sshagent(['tomcat9']) {
+    sh 'scp -o StrictHostKeyChecking=no target/*.war ec2-user@172.31.38.163:/opt/tomcat9/webapps/' 
+          }
+    
+    }
 }
